@@ -16,6 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "iajs": "^0.2.0",
+    "jsdom": "21",
     "node-fetch": "^3.3.2"
   }
 }
