@@ -56,7 +56,7 @@ const uniq = (arr, field) => {
 };
 
 /** @type {(urlToSave: string) => Promise<void>} */
-const main = async (urlToSave) => {
+const archive = async (urlToSave) => {
     const {hostname, pathname} = new URL(urlToSave);
     let dir = pathname.replace(/^\/*|\/.*/, "");
     const versions = await getArchived(urlToSave);
@@ -79,6 +79,8 @@ if (argv.length < 3) {
     console.warn(`usage: index.js <url-to-fetch>`);
     process.exit(1);
 } else {
-    await main(argv.pop());
+    for (const url of argv.slice(2)) {
+        await archive(url);
+    }
     process.exit(0);
 }
