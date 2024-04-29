@@ -112,7 +112,7 @@ const mdFromHtml = (html) => {
 const encoder = new TextEncoder("utf8");
 const utf8 = (s) => encoder.encode(s);
 const sha256 = (s) =>
-    createHash("sha256").update(utf8(s)).digest("hex");
+    createHash("sha256").update(utf8(s)).digest("base64url");
 
 const dedupArchiveOrgMarkup = (html) =>
     html.replace(
