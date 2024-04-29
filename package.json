@@ -1,0 +1,21 @@
+{
+  "name": "archive-org",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Fetch and save archived versions of urls.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "grab": "./index.js https://hai.org/hai-global-anti-harassment-policy/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johan/hai.org.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "iajs": "^0.2.0",
+    "node-fetch": "^3.3.2"
+  }
+}
